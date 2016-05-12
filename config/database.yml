@@ -1,0 +1,20 @@
+default: &default
+  adapter: postgresql
+  encoding: unicode
+  user: postgres
+  password:
+  pool: 5
+
+production:
+  <<: *default
+  database: lockit_production
+  username: lockit
+  password: <%= ENV['LOCKIT_DATABASE_PASSWORD'] %>
+
+development:
+  <<: *default
+  database: lockit_development
+
+test:
+  <<: *default
+  database: lockit_test
