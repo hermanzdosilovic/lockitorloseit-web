@@ -4,36 +4,57 @@
       h1#product-name Lock it or Lose it
       hr.small
       p#product-description
-        | protects wallets and phones from pickpockets
+        | Lock it or Lose it is a brand that protects wallets and phones from pickpockets
 
 .lock-it-wallet#lock-it-wallet
   .container.lock-it
     h1 Lock it Wallet
     .row.description
-      p.col-xs-12.col-sm-12.col-md-12.col-lg-6.description
+      p.col-xs-5.col-sm-4.col-md-6.col-lg-6.description
         | Lock it Wallet is intended to protect your wallet from theft.
         |  It consists of a key-ring with a flashlight, a string and a card.
-      p.col-xs-12.col-sm-12.col-md-12.col-lg-6.description-image
+      p.col-xs-7.col-sm-8.col-md-6.col-lg-6.description-image
         = image_tag asset_path('wallet.jpg'), class: 'img-responsive'
     .row.use
-      p.col-xs-12.col-sm-12.col-md-12.col-lg-6.use
+      p.col-xs-5.col-sm-4.col-md-6.col-lg-6.use
         | Put the key-ring with the flashlight into the inner pocket of your bag, which has to be zipped up to prevent the key-ring from falling out of it.
         |  Then you put the card into your wallet where it is safe from falling out.
-      p.col-xs-12.col-sm-12.col-md-12.col-lg-6.use-image
+      p.col-xs-7.col-sm-8.col-md-6.col-lg-6.use-image
         = image_tag asset_path('wallet-use.jpg'), class: 'img-responsive'
 
 .lock-it-ring#lock-it-ring
   .container.lock-it
     h1 Lock it Ring
     .row.description
-      p.col-xs-12.col-sm-12.col-md-12.col-lg-6.description-image
+      p.col-xs-7.col-sm-8.col-md-6.col-lg-6.description-image
         = image_tag asset_path('ring-open.jpg'), class: 'img-responsive'
-      p.col-xs-12.col-sm-12.col-md-12.col-lg-6.description
+      p.col-xs-5.col-sm-4.col-md-6.col-lg-6.description
         | Lock it Ring is a handbag ring which is used to provide an extra safety for your personal belongings.
     .row.use
-      p.col-xs-12.col-sm-12.col-md-12.col-lg-6.use-image
+      p.col-xs-7.col-sm-8.col-md-6.col-lg-6.use-image
         = image_tag asset_path('ring-use.jpg'), class: 'img-responsive'
-      p.col-xs-12.col-sm-12.col-md-12.col-lg-6.use
+      p.col-xs-5.col-sm-4.col-md-6.col-lg-6.use
         | Hook up the zipper of your bag with the ring on the handles. 
         |  When you want to take out your wallet from your handbag, you simply unlock the Lock it Ring and take out the wallet. 
         |  When putting the wallet back into your handbag, hook the ring back on the handles.
+
+.order#order
+  .container.lock-it
+    h1 Pre-order your LOCK IT
+    .order-form.col-xs-12.col-sm-8.col-sm-offset-2.col-md-6.col-md-offset-3.col-lg-6.col-lg-offset-3
+      = simple_form_for @order do |f|
+        = f.input :first_name
+        = f.input :last_name
+        = f.input :email
+        .form-group.row
+          .col-xs-4.col-sm-4.col-md-4.col-lg-3
+            = f.input :wants_ring, label: 'Lock it Ring'
+          .col-xs-3.col-sm-3.col-md-3.col-lg-3
+            = f.input :ring_amount, label: false, collection: 1..100, selected: 1
+        .form-group.row
+          .col-xs-4.col-sm-4.col-md-4.col-lg-3
+            = f.input :wants_wallet, label: 'Lock it Wallet'
+          .col-xs-3.col-sm-3.col-md-3.col-lg-3
+            = f.input :wallet_amount, label: false, collection: 1..100, selected: 1
+        = f.input :note
+        = f.button :submit, class: 'btn-success', style: 'width: 100%; display: block;'

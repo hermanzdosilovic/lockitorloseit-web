@@ -8,6 +8,7 @@ $(document).ready(function() {
   changeMinHeightOnResize(".greeting", 0);
   changeMinHeightOnResize(".lock-it-wallet", 0);
   changeMinHeightOnResize(".lock-it-ring", 0);
+  changeMinHeightOnResize(".order", 0);
 
   var $window = $(window);
   var $navbar = $(".navbar-default");
@@ -20,13 +21,13 @@ $(document).ready(function() {
     return false;
   });
 
-  if ($window.width() <= 767) {
+  if (window.innerWidth <= 767) {
     $navbar.addClass("navbar-fixed-top");
   } else {
     $navbar.removeClass("navbar-fixed-top");
   }
   $window.resize(function() {
-    if ($window.width() <= 767) {
+    if (window.innerWidth <= 767) {
       $navbar.addClass("navbar-fixed-top");
     } else {
       $navbar.removeClass("navbar-fixed-top");
