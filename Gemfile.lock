@@ -164,6 +164,7 @@ DEPENDENCIES
   byebug (~> 9.0)
   devise (~> 4.1)
   dotenv-rails (~> 2.1)
+  jquery-rails (~> 4.1)
   mina (~> 0.3.8)
   pg (~> 0.15)
   rails (= 4.2.6)

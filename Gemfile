@@ -6,6 +6,7 @@ gem 'pg', '~> 0.15'
 
 gem 'devise', '~> 4.1'
 gem 'dotenv-rails', '~> 2.1'
+gem 'jquery-rails', '~> 4.1'
 gem 'mina', '~> 0.3.8'
 gem 'sass-rails', '~> 5.0'
 gem 'simple_form', '~> 3.2'

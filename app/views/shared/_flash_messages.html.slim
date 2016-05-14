@@ -1,0 +1,4 @@
+- flash.each do |type, message|
+  .alert.fade.in class=bootstrap_class_for(type)
+    = link_to "&times;".html_safe, '#', class: 'close', "data-dismiss" => 'alert', "aria-label" => "close"
+    = message
