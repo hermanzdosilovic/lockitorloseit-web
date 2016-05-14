@@ -1,0 +1,38 @@
+.wallpaper {
+  background-image: asset-url("wallet-use.jpg");
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-attachment: fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  background-size: cover;
+  -o-background-size: cover;
+}
+
+.cover.gray {
+  background-color: rgba(50, 50, 50, 0.7);
+}
+
+html, body {
+  height: 100%;
+}
+
+.site {
+  min-height: 100%;
+  position: relative;
+}
+
+.content {
+  padding-bottom: 62px;
+}
+
+.footer {
+  height: 62px;
+  width: 100%;
+  line-height: 62px;
+  text-align: center;
+  color: #ddd;
+  background-color: rgb(100, 100, 100);
+  position: absolute;
+  bottom: 0;
+}

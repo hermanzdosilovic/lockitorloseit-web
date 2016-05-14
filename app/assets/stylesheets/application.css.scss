@@ -1,0 +1,138 @@
+@import "bootstrap.min";
+@import "custom";
+
+.cover {
+  width: inherit;
+  min-width: inherit;
+  height: inherit;
+  min-height: inherit;
+  position: relative;
+}
+
+.content {
+  @media screen and (min-width: 768px) {
+    margin-top: -90px;
+  }
+  z-index: 0;
+}
+
+.greeting .container {
+  width: 100%;
+  text-align: center;
+  padding-bottom: 62px;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.greeting .container h1#product-name {
+  font-size: 82px;
+  font-weight: bold;
+  color: white;
+}
+
+.greeting .container hr.small {
+  max-width: 100px;
+  border: 1px solid white;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.greeting .container p#product-description {
+  font-size: 25px;
+  color: white;
+}
+
+.lock-it-wallet, .lock-it-ring {
+  background-color: #f4f8fb; // fbfbfb
+}
+
+.lock-it-ring {
+  border-top: 1px dashed black;
+}
+
+.container.lock-it {
+  width: inherit;
+  margin-left: 80px;
+  margin-right: 80px;
+  min-height: inherit;
+  padding-top: 62px;
+  padding-bottom: 62px;
+  display: table;
+
+  h1 {
+    font-size: 50px;
+    margin-bottom: 80px;
+  }
+  .row.description {
+    margin-bottom: 40px;
+  }
+  p {
+    font-size: 25px;
+    margin-bottom: 40px;
+  }
+  .img-responsive {
+    border-radius: 10px;
+  }
+}
+
+.lock-it-ring .container {
+  text-align: right;
+}
+
+// bootstrap change
+.navbar {
+  @media screen and (min-width: 768px) {
+    margin: 50px 0 0 0;
+  }
+  border: 0px;
+  border-radius: 0px;
+  z-index: 100;
+}
+
+.navbar-default {
+  background: transparent;
+  @media screen and (min-width: 768px) {
+    padding-left: 80px;
+    padding-right: 80px;
+  }
+}
+
+.navbar-default .navbar-nav > li > a {
+  color: #ddd;
+  font-size: 20px;
+}
+
+.navbar-default .navbar-nav > li > a:hover,
+.navbar-default .navbar-nav > li > a:focus {
+  color: orange;
+}
+
+.navbar-default .navbar-nav > .active > a,
+.navbar-default .navbar-nav > .active > a:hover,
+.navbar-default .navbar-nav > .active > a:focus {
+  color: orange;
+}
+
+.navbar-default .navbar-toggle {
+  margin-top: 13px;
+}
+.navbar-default .navbar-toggle:hover,
+.navbar-default .navbar-toggle:focus {
+  background-color: transparent;
+}
+
+@media (max-width: 767px) {
+    .navbar {
+      background-color: rgba(100, 100, 100, 1);
+    }
+    .navbar-header {
+      min-height: 60px;
+    }
+    .navbar-default .navbar-collapse {
+      border: 0px;
+    }
+    .navbar-default .navbar-nav > li > a {
+      font-size: 15px;
+    }
+}

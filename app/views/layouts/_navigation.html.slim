@@ -1,0 +1,13 @@
+nav.navbar.navbar-default
+  .container-fluid
+    .navbar-header
+      = button_tag class: 'navbar-toggle', 'data-toggle': 'collapse',  'data-target': "#navbar-collapse-1" do
+        span.sr-only
+        span.icon-bar
+        span.icon-bar
+        span.icon-bar
+    .collapse.navbar-collapse#navbar-collapse-1
+      ul.nav.navbar-nav.navbar-right
+        li.hidden= link_to 'Home', '#home', class: 'scroll'
+        li= link_to 'LOCK IT WALLET', '#lock-it-wallet', class: 'scroll'
+        li= link_to 'LOCK IT RING', '#lock-it-ring', class: 'scroll'
