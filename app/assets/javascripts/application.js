@@ -1,5 +1,6 @@
 //= require jquery-1.12.3.min
 //= require bootstrap.min
+//= require weloveiconfonts_rails
 //= require custom
 //= require_tree .
 

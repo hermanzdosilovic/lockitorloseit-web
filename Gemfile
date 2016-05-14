@@ -9,6 +9,7 @@ gem 'dotenv-rails', '~> 2.1'
 gem 'mina', '~> 0.3.8'
 gem 'sass-rails', '~> 5.0'
 gem 'slim-rails', '~> 3.0'
+gem 'weloveiconfonts_rails', '~> 1.1'
 
 group :development, :test do
   gem 'byebug', '~> 9.0'
