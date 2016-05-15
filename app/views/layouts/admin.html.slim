@@ -12,6 +12,26 @@ html
     
   body
     .site
+      .navigation
+        nav.navbar.navbar-default
+          .container-fluid
+            .navbar-header
+              = button_tag class: 'navbar-toggle', 'data-toggle': 'collapse',  'data-target': "#navbar-collapse-1" do
+                span.sr-only
+                span.icon-bar
+                span.icon-bar
+                span.icon-bar
+              = link_to 'Admin panel', '#home', class: 'scroll navbar-brand'
+            .collapse.navbar-collapse#navbar-collapse-1
+              ul.nav.navbar-nav.navbar-right
+                li.hidden= link_to 'Home', '#home', class: 'scroll'
+                li.dropdown
+                  a.dropdown-toggle aria-expanded="false" aria-haspopup="true" data-toggle="dropdown" href="#" role="button" 
+                    = current_user.email
+                    span.caret
+                  ul.dropdown-menu
+                    li= link_to "Logout", destroy_user_session_path, method: :delete
+
       .content
         .container
           = yield
