@@ -1,0 +1,23 @@
+@import "bootstrap.min";
+@import "weloveiconfonts_rails";
+@import "custom";
+
+body {
+  background-color: #f4f8fb;
+}
+
+.site {
+  padding-top: 62px;
+}
+
+.main-button {
+  width: 100%;
+}
+
+.panel-default > .panel-heading, .panel-body {
+  background-color: #f4f8fb;
+}
+
+.panel, .panel-heading {
+  border: none;
+}
