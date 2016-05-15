@@ -1,8 +1,4 @@
 class OrdersController < ApplicationController
-  def index
-    render json: Order.all
-  end
-
   def create
     @order = Order.new(order_params)
     if @order.save

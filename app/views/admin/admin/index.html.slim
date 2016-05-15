@@ -1,0 +1,20 @@
+table.table.table-stripped
+  thead
+    tr
+      th First name
+      th Last name
+      th Email
+      th Rings
+      th Wallets
+      th Date
+      th Note
+  tbody
+    - @orders.each do |order|
+      tr
+        td= order.first_name
+        td= order.last_name
+        td= order.email
+        td= (order.wants_ring ? 1 : 0 ) * order.ring_amount
+        td= (order.wants_wallet ? 1 : 0) * order.wallet_amount
+        td= order.created_at
+        td= order.note 
