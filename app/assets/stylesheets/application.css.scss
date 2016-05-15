@@ -21,13 +21,11 @@
   width: 100%;
   text-align: center;
   padding-bottom: 62px;
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
+  padding-top: 20%;
 }
 
 .greeting .container h1#product-name {
-  font-size: 82px;
+  font-size: 5em;
   font-weight: bold;
   color: white;
 }
@@ -40,7 +38,7 @@
 }
 
 .greeting .container p#product-description {
-  font-size: 25px;
+  font-size: 2em;
   color: white;
 }
 
@@ -66,14 +64,14 @@
   display: table;
 
   h1 {
-    font-size: 50px;
+    font-size: 3em;
     margin-bottom: 80px;
   }
   .row.description {
     margin-bottom: 40px;
   }
   p {
-    font-size: 23px;
+    font-size: 1.5em;
     margin-bottom: 40px;
   }
   .img-responsive {
@@ -108,11 +106,16 @@
   font-size: 20px;
 }
 
-.navbar-default .navbar-nav > li > a:hover,
-.navbar-default .navbar-nav > li > a:focus {
-  color: orange;
+.navbar-default .navbar-brand {
+  color: white;
+  font-size: 25px;
+  margin-top: 10px;
 }
 
+.navbar-default .navbar-brand:hover,
+.navbar-default .navbar-brand:focus,
+.navbar-default .navbar-nav > li > a:hover,
+.navbar-default .navbar-nav > li > a:focus,
 .navbar-default .navbar-nav > .active > a,
 .navbar-default .navbar-nav > .active > a:hover,
 .navbar-default .navbar-nav > .active > a:focus {
@@ -129,7 +132,7 @@
 
 @media (max-width: 767px) {
     .navbar {
-      background-color: rgba(100, 100, 100, 1);
+      background-color: rgba(100, 100, 100, 0.9);
     }
     .navbar-header {
       min-height: 60px;
